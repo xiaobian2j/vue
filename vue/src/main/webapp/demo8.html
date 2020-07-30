@@ -9,11 +9,21 @@
 
 	<body>
 		<div id="app">
-			
+			用户名：<input type="text" v-model="user.username"/><br>
+			密码：<input type="text" v-model="user.password"/>
 		</div>
 	</body>
 	<script>
 		//view model
+		new Vue({
+			el:"#app",
+			data:{
+				user:{
+					username:"xiaobian",
+					password:"1234"
+				}
+			}
+		});
 		
 	</script>
 
