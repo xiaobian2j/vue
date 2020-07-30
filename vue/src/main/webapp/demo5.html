@@ -4,18 +4,38 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>v-on:事件修饰符</title>
+		<style>
+			#div {
+				background-color: red;
+			}
+		</style>
 
 		<script src="js/vuejs-2.5.16.js"></script>
 	</head>
 
 	<body>
 		<div id="app">
-		
+			<form action="https://www.baidu.com/" method="post" @submit.prevent>
+				<input type="submit" value="提交"/>
+			</form>
+			<div @mouseover="fun1" id="div">
+				<textarea @mouseover.stop="fun2($event)">这是一个文件域</textarea>
+			</div>
 		</div>
 	</body>
 	<script>
 		//view model
-		
+		new Vue({
+			el:"#app",
+			methods:{
+				fun1:function () {
+					alert("进入div");
+				},
+				fun2:function (event) {
+					alert("进入textarea");
+				}
+			}
+		});
 		
 		
 	</script>
