@@ -7,11 +7,23 @@
 	</head>
 	<body>
 		<div id="app">
-			
+			<span v-show="flag">xiaobian</span>
+			<span v-if="flag">bianbian</span>
+			<button @click="change">切换</button>
 		</div>
 	</body>
 	<script>
 		//view model
-		
+		new Vue({
+			el:"#app",
+			data:{
+				flag:false
+			},
+			methods:{
+				change:function () {
+					this.flag = !this.flag;
+				}
+			}
+		});
 	</script>
 </html>
