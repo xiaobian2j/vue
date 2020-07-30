@@ -13,15 +13,30 @@
 				<tr>
 					<td>序号号</td>
 					<td>编号</td>
-					<td>名称</td>
-					<td>价格</td>
+					<td>姓名</td>
+					<td>年龄</td>
 				</tr>
-				
+				<tr v-for="(person,index) in persons">
+					<td>{{index}}</td>
+					<td>{{person.id}}</td>
+					<td>{{person.name}}</td>
+					<td>{{person.age}}</td>
+				</tr>
 			</table>
 		</div>
 	</body>
 	<script>
 		//view model
+		new Vue({
+			el:"#app",
+			data:{
+				persons:[
+					{id:1,name:"xiaobian",age:18},
+					{id:2,name:"bianbian",age:19},
+					{id:3,name:"bianxiaobian",age:20}
+				]
+			}
+		});
 		
 	</script>
 
