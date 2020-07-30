@@ -21,6 +21,18 @@
 	</body>
 	<script>
 		//view model
+		new Vue({
+			el:"#app",
+			methods:{
+				fun1:function () {
+					alert("进入div");
+				},
+				fun2:function (event) {
+					alert("进入textarea");
+					event.stopPropagation();
+				}
+			}
+		});
 		
 	</script>
 
