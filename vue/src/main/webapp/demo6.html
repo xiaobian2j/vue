@@ -10,12 +10,19 @@
 
 	<body>
 		<div id="app">
-			
+			<input type="text" @keydown.enter="fun">
 		</div>
 	</body>
 	<script>
 		//view model
-		
+		new Vue({
+			el:"#app",
+			methods:{
+				fun:function () {
+					alert("提交！");
+				}
+			}
+		});
 	</script>
 
 </html>
