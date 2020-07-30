@@ -7,11 +7,17 @@
 	</head>
 	<body>
 		<div id="app">
-			<div></div>
-			<div></div>
+			<div v-html="message"></div>
+			<div v-text="message"></div>
 		</div>
 	</body>
 	<script>
 		//view model
+		new Vue({
+			el:"#app",
+			data:{
+				message:"<h1>Hello</h1>"
+			}
+		});
 	</script>
 </html>
