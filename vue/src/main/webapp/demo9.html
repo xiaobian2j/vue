@@ -7,11 +7,19 @@
 	</head>
 	<body>
 		<div id="app">
-								
+			<font size="5" v-bind:color="col1">Xxxx</font>
+			<font size="5" :color="col2">Yyyy</font>
 		</div>
 	</body>
 	<script>
 		//view model
+		new Vue({
+			el:"#app",
+			data:{
+				col1:"red",
+				col2:"green"
+			}
+		});
 		
 	</script>
 </html>
